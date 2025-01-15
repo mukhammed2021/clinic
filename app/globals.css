@@ -73,10 +73,13 @@ body {
     @apply h-full;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-extralight text-foreground;
   }
 }
 
 .wrapper {
   @apply flex min-h-full flex-col overflow-hidden supports-[overflow:clip]:overflow-clip [&>main]:flex-auto;
+}
+.container {
+  @apply mx-auto max-w-[85.75rem] px-4;
 }
