@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { MenuIcon, SearchIcon, User, X } from "lucide-react";
 import { Input } from "./ui/input";
 import { useIsMobile } from "./hooks/use-mobile";
@@ -9,13 +8,14 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import Navbar from "./navbar";
 import Logo from "./logo";
+import { useIsMenuOpen } from "./hooks/use-menu-open";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile(915);
+  const { isMenuOpen, setIsMenuOpen } = useIsMenuOpen();
 
   return (
-    <header>
+    <header className="relative z-30">
       <div className="bg-neutral-100">
         <div
           className={cn(
