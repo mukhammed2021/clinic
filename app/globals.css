@@ -83,3 +83,16 @@ body {
 .container {
   @apply mx-auto max-w-[85.75rem] px-4;
 }
+
+.swiper-pagination-bullets {
+  @apply flex items-center justify-center gap-4;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply inline-block size-4 cursor-pointer rounded-full bg-[#d9d9d9];
+}
+
+.swiper-pagination-bullets
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply size-5 bg-[#648eff];
+}
