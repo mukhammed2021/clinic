@@ -19,7 +19,7 @@ export default function BreadcrumbSection({
     <div className="pb-5 pt-[3.625rem] sm:pb-10">
       <div className="container">
         <Breadcrumb>
-          <BreadcrumbList>
+          <BreadcrumbList className="font-light">
             <BreadcrumbItem>
               <BreadcrumbLink href="/" className="underline">
                 Главная страница
