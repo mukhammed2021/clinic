@@ -3,34 +3,42 @@ import ServicesItems from "@/components/services-items";
 
 const servicesItems = [
   {
+    id: 1,
     src: "/services/dentistry.png",
     title: "Стоматология",
   },
   {
+    id: 2,
     src: "/services/diagnostics.png",
     title: "Диагностика",
   },
   {
+    id: 3,
     src: "/services/analysis.png",
     title: "Анализы",
   },
   {
+    id: 4,
     src: "/services/vaccination.png",
     title: "Вакцинация",
   },
   {
+    id: 5,
     src: "/services/certificates.png",
     title: "Медицинские справки",
   },
   {
+    id: 6,
     src: "/services/checkup.png",
     title: "Check-Up",
   },
   {
+    id: 7,
     src: "/services/therapy.png",
     title: "Терапия",
   },
   {
+    id: 8,
     src: "/services/consultation.png",
     title: "Консультация",
   },
