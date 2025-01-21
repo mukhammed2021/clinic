@@ -54,7 +54,7 @@ export default function Services() {
         <ServicesItems servicesItems={servicesItems} />
         <div className="pt-[5.375rem] text-center">
           <Link
-            href="/"
+            href="/services"
             className="inline-block rounded-[.9375rem] bg-[#82a4ff] px-16 py-[.875rem] text-xl font-medium text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] transition-shadow hover:shadow-none"
           >
             Все услуги
