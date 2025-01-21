@@ -5,7 +5,7 @@ import Header from "@/components/header";
 import Testimonials from "@/components/testimonials";
 import AllServices from "./all-services";
 
-export default function page() {
+export default function Services() {
   return (
     <div className="wrapper">
       <Header />
