@@ -8,7 +8,13 @@ import {
   BreadcrumbSeparator,
 } from "./ui/breadcrumb";
 
-export default function BreadcrumbSection() {
+interface BreadBrumbSectionProps {
+  breadcrumbPage: string;
+}
+
+export default function BreadcrumbSection({
+  breadcrumbPage,
+}: BreadBrumbSectionProps) {
   return (
     <div className="pb-5 pt-[3.625rem] sm:pb-10">
       <div className="container">
@@ -23,7 +29,7 @@ export default function BreadcrumbSection() {
               <Slash />
             </BreadcrumbSeparator>
             <BreadcrumbItem>
-              <BreadcrumbPage>Услуги</BreadcrumbPage>
+              <BreadcrumbPage>{breadcrumbPage}</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

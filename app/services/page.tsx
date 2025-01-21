@@ -10,7 +10,7 @@ export default function Services() {
     <div className="wrapper">
       <Header />
       <main>
-        <BreadcrumbSection />
+        <BreadcrumbSection breadcrumbPage="Услуги" />
         <AllServices />
         <Testimonials />
         <Enroll />
