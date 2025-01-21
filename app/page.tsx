@@ -4,6 +4,7 @@ import Hero from "./hero";
 import Services from "./services";
 import Offers from "./offers";
 import Promotions from "./promotions";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Services />
         <Offers />
         <Promotions />
+        <Testimonials />
       </main>
       <Footer />
     </div>

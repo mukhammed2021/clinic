@@ -96,3 +96,11 @@ body {
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply size-5 bg-[#648eff];
 }
+
+.testimonials .swiper-slide {
+  @apply !scale-90 transition-transform duration-300;
+}
+
+.testimonials .swiper-slide.swiper-slide-active {
+  @apply !scale-105;
+}
