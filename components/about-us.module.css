@@ -1,0 +1,72 @@
+.title {
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 39.01px;
+  text-align: left;
+  background: transparent;
+}
+
+.text {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 29.26px;
+  text-align: left;
+}
+
+.backgroundText {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.26px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.backgroundBlock {
+  width: 100%;
+  text-align: center;
+  margin-top: 5rem;
+  position: relative;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(5px);
+  height: 534px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 717px;
+  width: 100%;
+  gap: 7%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .title {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+  
+  .text {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+
+  .backgroundText {
+    font-size: 18px !important;
+    line-height: 26px !important;
+    font-weight: 300;
+  }
+
+  .backgroundBlock {
+    height: 100% !important;
+  }
+} 
