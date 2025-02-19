@@ -9,7 +9,7 @@ const menuList = [
   {
     id: 1,
     name: "О клинике",
-    href: "/",
+    href: "/about-us",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const menuList = [
   {
     id: 3,
     name: "Акции",
-    href: "/",
+    href: "/sales",
   },
   {
     id: 4,
