@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -53,7 +54,7 @@ export default function Sales() {
           {/* Навигационная цепочка */}
           <div className="mb-8">
             <p className="text-gray-600">
-              <a href="/" className="hover:underline">Главная страница</a>
+              <Link href="/" className="hover:underline">Главная страница</Link>
               <span className="mx-2">/</span>
               <span>Акции</span>
             </p>
@@ -182,7 +183,7 @@ export default function Sales() {
             </p>
 
             <div className="flex justify-center gap-6">
-              <a 
+              <Link 
                 href="/appointment" 
                 className="px-8 py-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
                 style={{
@@ -192,8 +193,8 @@ export default function Sales() {
                 }}
               >
                 Записаться по акции
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="/consultation" 
                 className="px-8 py-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
                 style={{
@@ -203,7 +204,7 @@ export default function Sales() {
                 }}
               >
                 Проконсультироваться
-              </a>
+              </Link>
             </div>
           </div>
         </div>
