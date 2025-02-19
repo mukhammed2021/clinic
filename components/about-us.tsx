@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './about-us.module.css'
 
 export default function AboutUs() {
@@ -8,7 +9,7 @@ export default function AboutUs() {
         {/* Навигационная цепочка */}
         <div className="mb-8">
           <p className="text-gray-600">
-            <a href="/" className="hover:underline">Главная страница</a>
+            <Link href="/" className="hover:underline">Главная страница</Link>
             <span className="mx-2">/</span>
             <span>О Клинике</span>
           </p>
@@ -189,7 +190,7 @@ export default function AboutUs() {
           </p>
 
           <div className={styles.buttonContainer}>
-            <a 
+            <Link 
               href="/appointment" 
               className="flex items-center justify-center text-white button-text"
               style={{
@@ -208,8 +209,8 @@ export default function AboutUs() {
               }}
             >
               Записаться на прием
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/consultation" 
               className="flex items-center justify-center text-white button-text"
               style={{
@@ -228,7 +229,7 @@ export default function AboutUs() {
               }}
             >
               Консультация
-            </a>
+            </Link>
           </div>
         </div>
 
