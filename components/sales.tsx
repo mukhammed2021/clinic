@@ -5,6 +5,36 @@ import Link from 'next/link'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
+import {
+    Dialog,
+    DialogContent,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+// Схема валидации формы
+const formSchema = z.object({
+    name: z.string().min(3, {
+        message: "Имя должно содержать не менее 3 символов.",
+    }),
+    phoneNumber: z.string().min(11, {
+        message: "В номере телефона должно быть не менее 11 цифр.",
+    }),
+});
 
 const salesData = [
   {
@@ -47,8 +77,20 @@ const SalesCard = ({ title, description }: { title: string; description: string 
 );
 
 export default function Sales() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      phoneNumber: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+  }
+
   return (
-    <>
+    <div className="w-full">
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* Навигационная цепочка */}
@@ -156,13 +198,14 @@ export default function Sales() {
           </h2>
           <p className="mb-12">4</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
             {salesData.map((sale, index) => (
-              <SalesCard 
-                key={index}
-                title={sale.title}
-                description={sale.description}
-              />
+              <div key={index} className="w-full flex justify-center">
+                <SalesCard 
+                  title={sale.title}
+                  description={sale.description}
+                />
+              </div>
             ))}
           </div>
 
@@ -182,34 +225,81 @@ export default function Sales() {
               предложениях и акциях.
             </p>
 
-            <div className="flex justify-center gap-6">
-              <Link 
-                href="/appointment" 
-                className="px-8 py-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
-                style={{
-                  background: '#7EC4E5',
-                  borderRadius: '15px',
-                  padding: '20px 40px'
-                }}
+            <div className="flex flex-col items-center gap-x-10 gap-y-4 min-[580px]:flex-row justify-between max-w-[663px] w-full mx-auto">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="h-auto w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-base font-medium shadow-[0_0_20px_0_rgba(144,173,252,0.63)] hover:bg-[#648eff] min-[580px]:w-[15.25rem]">
+                    Записаться на прием
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl font-light">
+                      Записаться к нам:
+                    </DialogTitle>
+                  </DialogHeader>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)}>
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem className="mb-4">
+                            <FormControl>
+                              <Input
+                                placeholder="Имя"
+                                {...field}
+                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="phoneNumber"
+                        render={({ field }) => (
+                          <FormItem className="mb-[2.625rem]">
+                            <FormControl>
+                              <Input
+                                type="tel"
+                                placeholder="Телефон номера"
+                                {...field}
+                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <Button
+                        type="submit"
+                        className="w-full rounded-[1.25rem] bg-[#fffcfc] text-lg font-bold uppercase text-black hover:bg-neutral-200"
+                      >
+                        отправить
+                      </Button>
+                    </form>
+                  </Form>
+                  <DialogFooter>
+                    <p className="text-center text-[.625rem] font-light">
+                      Используя наш сайт, вы подтверждаете согласие с этой
+                      политикой обработки персональных данных и разрешаете нам
+                      обрабатывать ваши данные в соответствии с её положениями.
+                    </p>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+              <Link
+                href="/"
+                className="inline-block w-full rounded-[.9375rem] bg-[#648eff]/[.7] py-4 text-center font-medium text-white shadow-[0_0_20px_0_rgba(144,173,252,0.63)] transition-colors hover:bg-[#648eff] min-[580px]:w-[15.25rem]"
               >
-                Записаться по акции
-              </Link>
-              <Link 
-                href="/consultation" 
-                className="px-8 py-3 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors"
-                style={{
-                  background: '#7EC4E5',
-                  borderRadius: '15px',
-                  padding: '20px 40px'
-                }}
-              >
-                Проконсультироваться
+                Консультация
               </Link>
             </div>
           </div>
         </div>
       </section>
-
-    </>
+    </div>
   )
 }
