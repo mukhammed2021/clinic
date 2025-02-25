@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { StaticImageData } from "next/image";
 import avatar from "/public/testimonials/avatar.jpg";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -31,7 +32,7 @@ interface Doctor {
     specialization: string;
     experience: string;
     schedule: string;
-    image: any; // или StaticImageData из next/image
+    image: StaticImageData | string; // Поддержка и локальных изображений, и URL
 }
 
 const doctors: Doctor[] = [
