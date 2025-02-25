@@ -14,7 +14,7 @@ const menuList = [
   {
     id: 2,
     name: "Услуги",
-    href: "/",
+    href: "/services",
   },
   {
     id: 3,
@@ -24,22 +24,22 @@ const menuList = [
   {
     id: 4,
     name: "Врачи",
-    href: "/",
+    href: "/doctors",
   },
   {
     id: 5,
     name: "Отзывы",
-    href: "/",
+    href: "/reviews",
   },
   {
     id: 6,
     name: "Контакты",
-    href: "/",
+    href: "/contacts",
   },
   {
     id: 7,
     name: "Адрес",
-    href: "/",
+    href: "/address",
   },
 ];
 

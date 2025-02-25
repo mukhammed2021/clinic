@@ -6,6 +6,7 @@ interface ServicesItemsProps {
   servicesItems: {
     src: string;
     title: string;
+    href?: string;
   }[];
 }
 
@@ -18,7 +19,7 @@ export default function ServicesItems({ servicesItems }: ServicesItemsProps) {
           className="rounded-[.9375rem] px-[1.625rem] py-9 shadow-[0_0_20px_0_rgba(3,49,173,0.3)]"
         >
           <AspectRatio ratio={1 / 1} className="mb-[.9375rem]">
-            <Link href="/">
+            <Link href={servicesItem.href || "/"}>
               <Image
                 src={servicesItem.src}
                 width={120}
@@ -29,7 +30,7 @@ export default function ServicesItems({ servicesItems }: ServicesItemsProps) {
             </Link>
           </AspectRatio>
           <h3 className="text-center">
-            <Link href="/" className="hover:underline">
+            <Link href={servicesItem.href || "/"} className="hover:underline">
               {servicesItem.title}
             </Link>
           </h3>
