@@ -10,7 +10,7 @@ export default function Promotions() {
             <p>Всего: 10</p>
           </div>
           <Link
-            href="/"
+            href="/sales"
             className="w-full rounded-[.9375rem] bg-[#82a4ff] px-[2.8125rem] py-3 text-center text-xl font-medium text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25),inset_0_-3px_6px_3px_rgba(0,0,0,0.07)] transition-shadow hover:shadow-none min-[475px]:w-auto"
           >
             Все акции
