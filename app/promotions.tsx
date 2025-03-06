@@ -10,7 +10,7 @@ export default function Promotions() {
             <p>Всего: 10</p>
           </div>
           <Link
-            href="/"
+            href="/sales"
             className="w-full rounded-[.9375rem] bg-[#82a4ff] px-[2.8125rem] py-3 text-center text-xl font-medium text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25),inset_0_-3px_6px_3px_rgba(0,0,0,0.07)] transition-shadow hover:shadow-none min-[475px]:w-auto"
           >
             Все акции
@@ -23,7 +23,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -35,7 +35,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -47,7 +47,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -59,7 +59,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -71,7 +71,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
