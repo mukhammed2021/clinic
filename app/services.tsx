@@ -6,6 +6,7 @@ const servicesItems = [
     id: 1,
     src: "/services/dentistry.png",
     title: "Стоматология",
+    href: "/services/stamatology"
   },
   {
     id: 2,

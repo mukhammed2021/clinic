@@ -276,12 +276,70 @@ const Stomatology: React.FC = () => {
                                 {doctor.schedule}
                             </p>
 
-                            <a
-                                href="/appointment"
-                                className="max-w-[198px] h-[51px] w-full flex items-center justify-center bg-[#648EFFB2] text-white rounded-[10px] hover:bg-blue-500 transition-colors mt-[37px]"
-                            >
-                                Записаться
-                            </a>
+                            <Dialog>
+                                <DialogTrigger asChild>
+                                    <Button className="max-w-[198px] h-[51px] w-full flex items-center justify-center bg-[#648EFFB2] text-white rounded-[10px] hover:bg-blue-500 transition-colors mt-[37px]">
+                                        Записаться
+                                    </Button>
+                                </DialogTrigger>
+                                <DialogContent className="border-black/35 bg-neutral-200/35 sm:rounded-[.9375rem]">
+                                    <DialogHeader>
+                                        <DialogTitle className="text-xl font-light">
+                                            Записаться к нам:
+                                        </DialogTitle>
+                                    </DialogHeader>
+                                    <Form {...form}>
+                                        <form onSubmit={form.handleSubmit(onSubmit)}>
+                                            <FormField
+                                                control={form.control}
+                                                name="name"
+                                                render={({ field }) => (
+                                                    <FormItem className="mb-4">
+                                                        <FormControl>
+                                                            <Input
+                                                                placeholder="Имя"
+                                                                {...field}
+                                                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                                            />
+                                                        </FormControl>
+                                                        <FormMessage />
+                                                    </FormItem>
+                                                )}
+                                            />
+                                            <FormField
+                                                control={form.control}
+                                                name="phoneNumber"
+                                                render={({ field }) => (
+                                                    <FormItem className="mb-[2.625rem]">
+                                                        <FormControl>
+                                                            <Input
+                                                                type="tel"
+                                                                placeholder="Телефон номера"
+                                                                {...field}
+                                                                className="rounded-[1.25rem] border-none font-light placeholder:text-[#c0b8b8]"
+                                                            />
+                                                        </FormControl>
+                                                        <FormMessage />
+                                                    </FormItem>
+                                                )}
+                                            />
+                                            <Button
+                                                type="submit"
+                                                className="w-full rounded-[1.25rem] bg-[#fffcfc] text-lg font-bold uppercase text-black hover:bg-neutral-200"
+                                            >
+                                                отправить
+                                            </Button>
+                                        </form>
+                                    </Form>
+                                    <DialogFooter>
+                                        <p className="text-center text-[.625rem] font-light">
+                                            Используя наш сайт, вы подтверждаете согласие с этой
+                                            политикой обработки персональных данных и разрешаете нам
+                                            обрабатывать ваши данные в соответствии с её положениями.
+                                        </p>
+                                    </DialogFooter>
+                                </DialogContent>
+                            </Dialog>
                         </div>
                     ))}
                 </div>

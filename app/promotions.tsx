@@ -23,7 +23,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -35,7 +35,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -47,7 +47,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -59,7 +59,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
@@ -71,7 +71,7 @@ export default function Promotions() {
             </h3>
             <p className="mb-7 font-normal">Скидка 20% на анализы</p>
             <Link
-              href="/"
+              href="/sales"
               className="rounded-[.9375rem] bg-[#648eff]/[.63] px-[1.375rem] py-[.375rem] font-normal text-white shadow-[0_0_6px_0_rgba(144,173,252,0.63)] transition-shadow hover:shadow-none"
             >
               Подробнее
